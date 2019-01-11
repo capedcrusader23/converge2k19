@@ -14,15 +14,20 @@ mongoose.connect('mongodb://uphaar:uphaar23@ds145434.mlab.com:45434/converge',{ 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
-app.use(pass.initialize());
-app.use(pass.session());
+
 app.set('view engine','ejs');
 
 app.use(session({ cookie: { maxAge: 60000 },
                   secret: 'woot',
                   resave: false,
                   saveUninitialized: false}));
+    app.use(pass.initialize());
+    app.use(pass.session());
 app.use(flash())
+app.use(function(req,res,next){
+  res.locals.user=req.user;
+  next();
+})
 app.use(route);
 
 
