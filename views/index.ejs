@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Converge 2019</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="public/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 </head>
 <body>
@@ -29,7 +29,7 @@
     <!--Main Content-->
     <div class="section">
             <div  id="landing-content" class=" container mt-5 mb-5" style="min-height:100%">
-                    <h2>Contents</h2>
+                    <h2 class="col">Contents</h2>
                     <p>Write something here</p>
                     <!-- We can add a image gallery or something, have to make something for making this content full page-->
                 </div>
@@ -54,9 +54,9 @@
 
     <script src="https://rawgit.com/alvarotrigo/fullPage.js/dev/src/fullpage.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.23.0/moment.js"></script>
-        <script src="/js/countdown.js"></script>
-        <script src="/js/moment-countdown.js"></script>
-        <script src="/js/index.js"></script>
+        <script src="../public/js/countdown.js"></script>
+        <script src="../public/js/moment-countdown.js"></script>
+        <script src="../public/js/index.js"></script>
         <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
         <script> new fullpage('#fullpage', {
 
@@ -68,7 +68,7 @@
             },
         });</script>
          <script>
-                particlesJS.load('particles-js', '/js/particles.json',
+                particlesJS.load('particles-js', '../public/js/particles.json',
                 function(){
                     console.log('particles.json loaded...')
                 });
